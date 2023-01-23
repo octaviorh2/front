@@ -1,0 +1,80 @@
+<!--
+<mat-sidenav-container fullscreen>
+
+  <mat-sidenav #sidenav mode="push">
+    <mat-toolbar color="primary" >
+      <span>Menu</span>
+      <span class="spacer"></span>
+
+      <button  mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon >menu </mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <mat-nav-list>
+          <a routerLink=""
+          mat-list-item
+          (click)="sidenav.toggle()">
+          <mat-icon matListItemIcon>label</mat-icon>
+          <span>Listado de Clientes </span>
+          </a>
+
+        <a routerLink="./listadofacturas"
+        mat-list-item
+        (click)="sidenav.toggle()">
+        <mat-icon matListItemIcon>format_list_numbered
+        </mat-icon>
+        <span>Listado Facturas </span>
+        </a>
+
+        <a routerLink="./FacturaCliente"
+        mat-list-item
+        (click)="sidenav.toggle()">
+        <mat-icon matListItemIcon>search</mat-icon>
+        <span>Facturas x Cliente </span>
+        </a>
+
+    </mat-nav-list>
+
+
+  </mat-sidenav>
+
+
+
+  <mat-toolbar>
+    <button  mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon >menu </mat-icon>
+    </button>
+
+
+  </mat-toolbar>
+
+
+</mat-sidenav-container> -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark  shadow-sm mb-3" data-bs-theme="dark">
+  <div class="container justify-content-center">
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" href="#"><i class="bi bi-people-fill"></i> Clientes</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="./listadofacturas" class="nav-link active" href="#"><i class="bi bi-layout-text-sidebar"></i> Facturas</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="./FacturaCliente" class="nav-link active"><i class="bi bi-reception-4"></i> Facturas Clientes</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container-fluid justify-content-center text-center ">
+
+  <div class="card shadow-lg mb-5 bg-white rounded ml-3 mr-3 mt-5 muted">
+    <div class="card-body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+
+</div>
